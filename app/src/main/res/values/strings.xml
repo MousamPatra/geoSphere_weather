@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GeoSphere Weather</string>
+
+    <string name="splash_screen_text">"Every Weather Tells a Story,\nWe're Here to Unveil It"</string>
+    <string name="splash_screen_design_by">DESIGN BY\nMOUSAM</string>
+
+    <string name="search_hint">Search For A City</string>
+
+    <string name="humidity">Humidity</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="condition">Condition</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="pressure">Air Pressure</string>
+
+    <string name="design_by">DESIGN BY MOUSAM</string>
+
+</resources>
