@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">GeoSphere Weather</string>
 
-    <string name="splash_screen_text">"Every Weather Tells a Story,\nWe're Here to Unveil It"</string>
+    <string name="splash_screen_text">"Every Weather Tells a Story!!"</string>
     <string name="splash_screen_design_by">DESIGN BY\nMOUSAM</string>
 
     <string name="search_hint">Search For A City</string>

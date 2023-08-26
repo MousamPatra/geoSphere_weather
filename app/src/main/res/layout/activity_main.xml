@@ -72,7 +72,6 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/merriweathersans_semibold"
         android:gravity="center"
-        android:text="00.00"
         android:textColor="@color/black"
         android:textSize="55sp" />
 
@@ -88,8 +87,7 @@
             android:layout_height="wrap_content"
             android:textSize="27sp"
             android:textColor="@color/black"
-            android:fontFamily="@font/merriweathersans_semibold"
-            android:text="°C"/>
+            android:fontFamily="@font/merriweathersans_semibold" />
 
         <TextView
             android:id="@+id/temp2"
@@ -97,8 +95,7 @@
             android:layout_height="wrap_content"
             android:textSize="27sp"
             android:textColor="#80000000"
-            android:fontFamily="@font/merriweathersans_semibold"
-            android:text="°F"/>
+            android:fontFamily="@font/merriweathersans_semibold" />
 
         </LinearLayout>
 
@@ -413,9 +410,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/outer_linear_layout"
-        android:layout_marginTop="7dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="17dp"
         android:fontFamily="@font/merriweathersans_medium"
         android:text="@string/design_by"
         android:textColor="@color/white" />
