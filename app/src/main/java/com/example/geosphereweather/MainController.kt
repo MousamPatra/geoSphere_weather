@@ -1,9 +1,9 @@
 package com.example.geosphereweather
 
-import com.example.geosphereweather.constant.AppConstants
+import com.example.geosphereweather.constants.AppConstants
 import com.example.geosphereweather.dataclasses.GeoSphereWeather
-import com.example.geosphereweather.delegate.ApiDelegate
-import com.example.geosphereweather.delegate.MainDelegate
+import com.example.geosphereweather.delegates.ApiDelegate
+import com.example.geosphereweather.delegates.MainDelegate
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

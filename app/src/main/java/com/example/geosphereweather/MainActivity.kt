@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.geosphereweather.databinding.ActivityMainBinding
 import com.example.geosphereweather.dataclasses.GeoSphereWeather
-import com.example.geosphereweather.delegate.MainDelegate
+import com.example.geosphereweather.delegates.MainDelegate
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

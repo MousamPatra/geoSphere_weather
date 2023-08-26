@@ -1,4 +1,4 @@
-package com.example.geosphereweather.delegate
+package com.example.geosphereweather.delegates
 
 import com.example.geosphereweather.dataclasses.GeoSphereWeather
 import retrofit2.Call
