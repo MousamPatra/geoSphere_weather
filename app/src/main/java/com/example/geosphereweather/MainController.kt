@@ -1,5 +1,6 @@
 package com.example.geosphereweather
 
+import com.example.geosphereweather.constant.AppConstants
 import com.example.geosphereweather.dataclasses.GeoSphereWeather
 import com.example.geosphereweather.delegate.ApiDelegate
 import com.example.geosphereweather.delegate.MainDelegate
@@ -12,13 +13,14 @@ import retrofit2.converter.gson.GsonConverterFactory
 class MainController(
     private val delegate: MainDelegate) {
 
+    //retrieve the date from open weather using api call
     fun retrieveWeatherDetails(cityName: String){
         val retrofit = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("https://api.openweathermap.org/data/2.5/")
+            .baseUrl(AppConstants.API_BASE_URL)
             .build().create(ApiDelegate::class.java)
 
-        val response = retrofit.getWeatherData(cityName, "933ca73bf89c355b946c16ee5b239d78", "metric")
+        val response = retrofit.getWeatherData(cityName, AppConstants.API_KEY, "metric")
         response.enqueue(object : Callback<GeoSphereWeather> {
             override fun onResponse(
                 call: Call<GeoSphereWeather>,
@@ -34,7 +36,6 @@ class MainController(
             }
 
             override fun onFailure(call: Call<GeoSphereWeather>, t: Throwable) {
-                TODO("Not yet implemented")
             }
         })
 

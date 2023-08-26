@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity(), MainDelegate {
         }
     }
 
+    // Extract the city entered in the searchView and invoke the controller to fetch weather details for that city.
     private fun getSearchCity(){
         val searchView = binding.searchView
         searchView.setOnQueryTextListener(object : android.widget.SearchView.OnQueryTextListener{
@@ -55,6 +56,7 @@ class MainActivity : AppCompatActivity(), MainDelegate {
         })
     }
 
+    // Populate the user interface with the data retrieved from the response.
     override fun setAllUIElements(responseBody: GeoSphereWeather){
         val cityName = responseBody.name
         val temperature = if(isInCelsius) "${responseBody.main.temp}" else celsiusToFahrenheit(responseBody.main.temp)
@@ -89,6 +91,7 @@ class MainActivity : AppCompatActivity(), MainDelegate {
         alterImageForWeatherConditions(conditions)
     }
 
+    // set the background image according to weather condition
     override fun alterImageForWeatherConditions(conditions: String){
         when(conditions){
             "Clear Sky", "Sunny", "Clear" ->{
@@ -120,21 +123,25 @@ class MainActivity : AppCompatActivity(), MainDelegate {
         binding.lottieAnimationView.playAnimation()
     }
 
+    //get current date
     private fun getCurrentDate(): String{
         val sdf = SimpleDateFormat("dd MMMM yyyy", Locale.getDefault())
         return sdf.format(Date())
     }
 
+    //get the day of weekdays
     private fun getDayName(): String{
         val sdf = SimpleDateFormat("EEEE", Locale.getDefault())
         return sdf.format(Date())
     }
 
+    //formatted into HH: mm
     private fun getFormattedTime(timestamp: Long): String{
         val sdf = SimpleDateFormat("HH: mm", Locale.getDefault())
         return sdf.format(Date(timestamp*1000))
     }
 
+    //convert the Celsius value to Fahrenheit
     private fun celsiusToFahrenheit(celsius: Double): String {
         val fahrenheit = celsius * 9 / 5 + 32
         return "%.2f".format(fahrenheit)
